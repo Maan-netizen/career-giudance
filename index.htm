@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Guidance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="auth-container">
+            <h1>Welcome to Career Guidance</h1>
+            <div id="login-form">
+                <h2>Login</h2>
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button id="login-btn">Login</button>
+                <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+            </div>
+            <div id="signup-form" style="display: none;">
+                <h2>Sign Up</h2>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button id="signup-btn">Sign Up</button>
+                <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+            </div>
+        </div>
+        <div id="app-container" style="display: none;">
+            <div id="career-selection">
+                <h2>Select Your Career Path</h2>
+                <select id="career-options">
+                    <option value="engineering">Engineering</option>
+                    <option value="management">Management</option>
+                </select>
+                <button id="career-submit">Next</button>
+            </div>
+            <div id="location-selection" style="display: none;">
+                <h2>Select Location</h2>
+                <button id="location-india">India</button>
+                <button id="location-abroad">Abroad</button>
+            </div>
+            <div id="college-list" style="display: none;">
+                <h2>Available Colleges</h2>
+                <ul id="colleges"></ul>
+                <button id="start-test">Take Aptitude Test</button>
+            </div>
+            <div id="aptitude-test" style="display: none;">
+                <h2>Aptitude Test</h2>
+                <div id="question-container"></div>
+                <button id="submit-test">Submit Test</button>
+            </div>
+            <div id="test-result" style="display: none;">
+                <h2>Test Result</h2>
+                <p>Your score: <span id="score"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
